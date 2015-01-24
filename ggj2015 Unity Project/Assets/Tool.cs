@@ -7,17 +7,36 @@ public class Tool : MonoBehaviour {
     float timer;
     public bool inUse;
     public GameObject itemSpot;
+    public s_ingredient currentIngredient;
 
 
-	void OnTriggerStay2D( Collider2D collider )
+    public void acceptItem( s_ingredient ingredient )
     {
-        var ingredient = collider.gameObject.GetComponent<s_ingredient>();
-        if( ingredient != null && Input.GetMouseButtonUp( 0 ) )
+        currentIngredient = ingredient;
+        currentIngredient.transform.parent = itemSpot.transform;
+        currentIngredient.transform.localPosition = Vector3.zero;
+        inUse = true;
+        timer = useTime;
+    }
+
+    public virtual void processIngredient(s_ingredient ingredient)
+    {
+        Debug.Log("processed!");
+    }
+
+    void Update()
+    {
+        if(inUse)
         {
-            ingredient.transform.parent = itemSpot.transform;
-            ingredient.transform.localPosition = Vector3.zero;
-            inUse = true;
-            timer = useTime;
+            timer -= Time.deltaTime;
+            if( timer <= 0)
+            {
+                inUse = false;
+                processIngredient(currentIngredient);
+
+            }
         }
     }
+
 }
+
