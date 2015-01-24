@@ -22,6 +22,7 @@ public class Tool : MonoBehaviour {
     public virtual void processIngredient(s_ingredient ingredient)
     {
         Debug.Log("processed!");
+        currentIngredient.transform.position += Vector3.up;
     }
 
     void Update()

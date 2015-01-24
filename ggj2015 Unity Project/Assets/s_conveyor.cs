@@ -53,7 +53,7 @@ public class s_conveyor : MonoBehaviour {
 
 	//determines the location of the despensor
 	private Vector3 dispensor(){
-		return new Vector3(0,0,0);
+        return transform.position;
 	}
 
 	//determines the advancement speed of the conveyor belt
