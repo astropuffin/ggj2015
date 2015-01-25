@@ -11,7 +11,8 @@ public class Formulaer : MonoBehaviour {
     public int[] formula = new int[] {1, 2, 0, 1};
     public AudioClip winSound;
     public int difficulty;
-    public Text potionText;
+    public Text potionText, scoreText;
+    public int score = -1;
 
     void Start()
     {
@@ -166,6 +167,9 @@ public class Formulaer : MonoBehaviour {
         }
         cauldron.dump();
         potionText.text = "Recipe:\n" + potionNames[Random.Range(0, potionNames.Length)];
+        score++;
+        scoreText.text = "Potions made: " + score.ToString();
+
         updateIcons();
       
     }
