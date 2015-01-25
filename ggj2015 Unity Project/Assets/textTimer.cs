@@ -17,6 +17,7 @@ public class textTimer : MonoBehaviour {
 	}
 
 	public void startClock(){
+        
 //		Debug.Log ("start clock");
 		start = Time.realtimeSinceStartup;
 		clockStarted = true;

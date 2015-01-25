@@ -96,7 +96,7 @@ public class s_ingredient : MonoBehaviour {
 			string[] quipArray = quips[i_type];
 			tm.text = quipArray[UnityEngine.Random.Range(0,quipArray.Length)];
 			tm.alignment = TextAlignment.Center;
-			child.transform.rotation = new Quaternion(0,0,0,0);
+            child.transform.rotation = Quaternion.identity;
 			child.GetComponent<textTimer>().startClock();
 			child.transform.parent = null;
 		}

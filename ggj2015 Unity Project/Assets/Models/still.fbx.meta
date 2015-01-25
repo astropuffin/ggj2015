@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 12689cc80b8c9f3478d1834f9a85b428
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: baseq
+    100002: bolt1
+    100004: bolt10
+    100006: bolt2
+    100008: bolt3
+    100010: bolt4
+    100012: bolt5
+    100014: bolt6
+    100016: bolt7
+    100018: bolt8
+    100020: bolt9
+    100022: flask
+    100024: flaskBase
+    100026: leg1
+    100028: leg2
+    100030: leg3
+    100032: leg4
+    100034: portal
+    100036: //RootNode
+    100038: still 1
+    400000: baseq
+    400002: bolt1
+    400004: bolt10
+    400006: bolt2
+    400008: bolt3
+    400010: bolt4
+    400012: bolt5
+    400014: bolt6
+    400016: bolt7
+    400018: bolt8
+    400020: bolt9
+    400022: flask
+    400024: flaskBase
+    400026: leg1
+    400028: leg2
+    400030: leg3
+    400032: leg4
+    400034: portal
+    400036: //RootNode
+    400038: still 1
+    2300000: baseq
+    2300002: bolt1
+    2300004: bolt10
+    2300006: bolt2
+    2300008: bolt3
+    2300010: bolt4
+    2300012: bolt5
+    2300014: bolt6
+    2300016: bolt7
+    2300018: bolt8
+    2300020: bolt9
+    2300022: flask
+    2300024: flaskBase
+    2300026: leg1
+    2300028: leg2
+    2300030: leg3
+    2300032: leg4
+    2300034: portal
+    2300036: still 1
+    3300000: baseq
+    3300002: bolt1
+    3300004: bolt10
+    3300006: bolt2
+    3300008: bolt3
+    3300010: bolt4
+    3300012: bolt5
+    3300014: bolt6
+    3300016: bolt7
+    3300018: bolt8
+    3300020: bolt9
+    3300022: flask
+    3300024: flaskBase
+    3300026: leg1
+    3300028: leg2
+    3300030: leg3
+    3300032: leg4
+    3300034: portal
+    3300036: still 1
+    4300000: portal
+    4300002: still
+    4300004: leg1
+    4300006: leg2
+    4300008: leg3
+    4300010: leg4
+    4300012: bolt1
+    4300014: bolt2
+    4300016: bolt3
+    4300018: bolt4
+    4300020: bolt5
+    4300022: bolt6
+    4300024: bolt7
+    4300026: bolt8
+    4300028: bolt9
+    4300030: bolt10
+    4300032: flask
+    4300034: baseq
+    4300036: flaskBase
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

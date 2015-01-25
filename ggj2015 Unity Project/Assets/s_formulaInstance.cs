@@ -16,6 +16,7 @@ public class s_formulaInstance : MonoBehaviour {
 
 	public reqType[] reqTypeArray;// = new reqType[4]();
 	public GameObject cauldron;
+    public AudioClip achieveSound;
 	
 	Cauldron c;
 
@@ -45,6 +46,7 @@ public class s_formulaInstance : MonoBehaviour {
 			s_formulaic sform0 = sform[0];
 			sform0.achieveFormula(this.gameObject);
 			GameObject.Destroy(this.gameObject);
+            AudioSource.PlayClipAtPoint(achieveSound, Camera.main.transform.position);
 			c.dump();
 		}
 	}

@@ -6,6 +6,8 @@ public class Cauldron : MonoBehaviour {
 
     public int currentFriendship, currentNostalgia, currentLaughter, currentFulfillment;
     public Text friendshipText, nostalgiaText, laughterText, fulfillmentText;
+    public AudioClip dumpSound;
+    public Formulaer formulaer;
 
 	public void Start(){
 		addElements(0,0,0,0);
@@ -26,6 +28,9 @@ public class Cauldron : MonoBehaviour {
 
         GetComponent<RandomSounds>().playRandomSound();
 
+        formulaer.updateIcons();
+
+
     }
 
     public void dump()
@@ -41,6 +46,8 @@ public class Cauldron : MonoBehaviour {
 
         currentFulfillment = 0;
         fulfillmentText.text = ":" + currentFulfillment.ToString();
+        AudioSource.PlayClipAtPoint(dumpSound, Camera.main.transform.position);
+        formulaer.updateIcons();
     }
 	
 	// Update is called once per frame

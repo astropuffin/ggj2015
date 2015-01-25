@@ -6,6 +6,7 @@ public class DragMachine : MonoBehaviour {
     public Collider2D dragTarget;
     public AlchemyTool[] tools;
     public LayerMask draggables;
+    public AudioClip dropSound;
 
 	void Update () {
 
@@ -69,6 +70,7 @@ public class DragMachine : MonoBehaviour {
                 }
                 else
                 {
+                    AudioSource.PlayClipAtPoint(dropSound, Camera.main.transform.position);
                     Destroy(dragTarget.gameObject);
                 }
             }
