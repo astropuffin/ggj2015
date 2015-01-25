@@ -10,10 +10,12 @@ public class s_formulaic : MonoBehaviour {
 	public float reqDelay = new float();
 	private float lastReqTime;
 	public List<int[]> formulas = new List<int[]>();
+	public int formCount;
+	public List<s_formulaInstance> formInstances;
 
 	// Use this for initialization
 	void Start () {
-	
+		formCount = 0;
 	}
 	
 	// Update is called once per frame
@@ -54,14 +56,20 @@ public class s_formulaic : MonoBehaviour {
 			lastReqTime = now;
 			formulaicStruct req = newRequirement();
 			GameObject i_requirement = Instantiate(formula,
-			                                       transform.position,
+			                                       transform.position + new Vector3(-25,-25,0),
 			                                       new Quaternion(0, 0, 0, 0)) as GameObject;
 //			i_requirement.transform.parent = gameObject.transform;
 			i_requirement.transform.SetParent(gameObject.transform);
 			s_formulaInstance s_i_requirement = i_requirement.GetComponent<s_formulaInstance>();
 			s_i_requirement.numReq = req.reqIntStruct;
 			s_i_requirement.reqTypeArray = req.reqTypeStuct;
+			s_i_requirement.formNumber = ++formCount;
+			formInstances.Add(s_i_requirement);
 		}
+	}
+
+	public void achieveFormula(s_formulaInstance fi){
+		formInstances.Remove(fi);
 	}
 
 }
