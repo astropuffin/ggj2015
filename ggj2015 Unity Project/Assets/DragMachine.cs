@@ -53,8 +53,9 @@ public class DragMachine : MonoBehaviour {
                 {
                     var elements = dragTarget.GetComponent<ProcessedElements>();
                     cauldron.GetComponent<Cauldron>().addElements(elements.friendship, elements.nostalgia, elements.laughter, elements.fulfillment);
-                    Destroy( dragTarget.gameObject );
+                  
                 }
+                  Destroy( dragTarget.gameObject );
             }
 
             if( dragTarget.tag == "ingredients")
@@ -63,7 +64,11 @@ public class DragMachine : MonoBehaviour {
                 if (tool != null)
                 {
                     tool.GetComponent<AlchemyTool>().acceptItem(dragTarget.GetComponent<s_ingredient>());
-                } 
+                }
+                else
+                {
+                    Destroy(dragTarget.gameObject);
+                }
             }
 
             foreach (var item in tools)

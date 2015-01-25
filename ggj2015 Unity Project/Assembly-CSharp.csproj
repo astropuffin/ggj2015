@@ -156,6 +156,7 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
      <Compile Include="Assets\ProcessedElements.cs" />
+     <Compile Include="Assets\RandomSounds.cs" />
      <Compile Include="Assets\TextPrinter.cs" />
      <Compile Include="Assets\ToolTipper.cs" />
      <Compile Include="Assets\Tooltip.cs" />
