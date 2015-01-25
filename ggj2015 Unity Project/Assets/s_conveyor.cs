@@ -8,6 +8,7 @@ public class s_conveyor : MonoBehaviour {
 	public float conveyorSpeed;
 	public float conveyorLength;
 	public float conveyorSpawnDelay;
+    public GameObject trashGo;
 	// Use this for initialization
 	void Start () {
 		lastObjectTime = Time.realtimeSinceStartup;
@@ -42,11 +43,26 @@ public class s_conveyor : MonoBehaviour {
 		}
 	}
 
+
+
+    IEnumerator trashIngredient( GameObject go)
+    {
+        TweenPosition.Begin(go.gameObject, .2f, trashGo.transform.position + Vector3.up * 2);
+        yield return new WaitForSeconds(.3f);
+        TweenPosition.Begin(go.gameObject, .4f, trashGo.transform.position);
+        yield return new WaitForSeconds(.5f);
+        Destroy(go);
+    }
+
 	//destroy any objects that are too far right
 	private void trash(){
+
+        
 		foreach (Transform child in gameObject.transform){
 			if (child.transform.localPosition.x > conveyorLength){
-				GameObject.Destroy(child.gameObject);
+                child.parent = null;
+                StartCoroutine( trashIngredient(child.gameObject));
+				
 			}
 		}
 	}

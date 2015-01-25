@@ -64,7 +64,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179286}
-  m_Text: Stuff
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -101,11 +101,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: 4e02580c9137ab04ba3f1bcca525c332, type: 3}
-  - {fileID: 8300000, guid: 99f38c43c3866f2458e23e0d9decb1be, type: 3}
+  - {fileID: 8300000, guid: bfa8c5bbee6f8384da9b5ae190588465, type: 3}
   - {fileID: 8300000, guid: ee9ddd8b9bc586743b5224c7c80f0b4b, type: 3}
+  - {fileID: 8300000, guid: 13e44adb3f72eee479bb30d737a812e6, type: 3}
   - {fileID: 8300000, guid: db39a939725a8524499474c8bfa43930, type: 3}
   - {fileID: 8300000, guid: 2116a2744315be74f9703d10cb540936, type: 3}
+  - {fileID: 8300000, guid: ad8f0a457c178804fb2449cbc7a762ed, type: 3}
+  - {fileID: 8300000, guid: 4e02580c9137ab04ba3f1bcca525c332, type: 3}
+  - {fileID: 8300000, guid: 91fa72859fa5a4c43bc84b00055575ea, type: 3}
+  - {fileID: 8300000, guid: 9311e823a6d6881478315ba4cfa16ea6, type: 3}
+  - {fileID: 8300000, guid: bd60808742b01d747b6379e064d60f62, type: 3}
+  - {fileID: 8300000, guid: fb0d734ae27bb8444a73014217e3b7ae, type: 3}
+  - {fileID: 8300000, guid: 99f38c43c3866f2458e23e0d9decb1be, type: 3}
+  - {fileID: 8300000, guid: 7c059fe126b31524385b5b550fa21610, type: 3}
+  - {fileID: 8300000, guid: 87c21b43eb2d0254589cf87f304f9df6, type: 3}
 --- !u!114 &11444352
 MonoBehaviour:
   m_ObjectHideFlags: 1

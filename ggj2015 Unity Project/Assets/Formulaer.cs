@@ -11,6 +11,7 @@ public class Formulaer : MonoBehaviour {
     public int[] formula = new int[] {1, 2, 0, 1};
     public AudioClip winSound;
     public int difficulty;
+    public Text potionText;
 
     void Start()
     {
@@ -29,7 +30,7 @@ public class Formulaer : MonoBehaviour {
         if (formula[0] == 0)
             cauldronFriendship = 0;
 
-        for (int i = 0; i < Mathf.Max(formula[0], cauldron.currentFriendship); i++)
+        for (int i = 0; i < Mathf.Max(formula[0], cauldronFriendship); i++)
         {
             var icon = Instantiate(frIcon) as GameObject;
             icon.transform.SetParent(gridGuy.transform);
@@ -61,7 +62,7 @@ public class Formulaer : MonoBehaviour {
         int cauldronNostalgia = cauldron.currentNostalgia;
         if (formula[1] == 0)
             cauldronNostalgia = 0;
-        for (int i = 0; i < Mathf.Max(cauldron.currentNostalgia, formula[1]); i++)
+        for (int i = 0; i < Mathf.Max(cauldronNostalgia, formula[1]); i++)
         {
             var icon = Instantiate(nIcon) as GameObject;
             icon.transform.SetParent(gridGuy.transform);
@@ -94,7 +95,7 @@ public class Formulaer : MonoBehaviour {
         if (formula[2] == 0)
             cauldronLaughter = 0;
 
-        for (int i = 0; i < Mathf.Max(cauldron.currentLaughter, formula[2]); i++)
+        for (int i = 0; i < Mathf.Max(cauldronLaughter, formula[2]); i++)
         {
             var icon = Instantiate(lIcon) as GameObject;
             icon.transform.SetParent(gridGuy.transform);
@@ -127,7 +128,7 @@ public class Formulaer : MonoBehaviour {
         if (formula[3] == 0)
             cauldronFulfillment = 0;
 
-        for (int i = 0; i < Mathf.Max(cauldron.currentFulfillment, formula[3]); i++)
+        for (int i = 0; i < Mathf.Max(cauldronFulfillment, formula[3]); i++)
         {
             var icon = Instantiate(fuIcon) as GameObject;
             icon.transform.SetParent(gridGuy.transform);
@@ -164,6 +165,7 @@ public class Formulaer : MonoBehaviour {
             formula[i] = Random.Range(0, difficulty);
         }
         cauldron.dump();
+        potionText.text = "Recipe:\n" + potionNames[Random.Range(0, potionNames.Length)];
         updateIcons();
       
     }
@@ -245,5 +247,68 @@ public class Formulaer : MonoBehaviour {
 
     }
 
+
+    string[] potionNames = new string[]{
+			"Potion of Cromulence",
+			"Potion of Dastardly Delight",
+			"Potion of Modest Mugwumps",
+			"Potion of Bucket",
+			"Potion of Godwottery",
+			"Potion of Cleared Collywobbles",
+			"Potion of Biggification",
+			"Potion of Poopy Poop",
+			"Potion of Unremacadamization",
+			"Potion of Batrachomyomachy",
+			"Potion of Callipygian Cohorts",
+			"Potion of Logorrhea",
+			"Potion of Formication",
+			"Potion of Tort",
+			"Potion of Namicone",
+			"Potion of Bees!",
+			"Potion of Absquatulation",
+			"Potion of Anencephalous Enemies",
+			"Potion of Hemidemisemiquaver",
+			"Potion of Snools",
+			"Potion of Walking Widdershins",
+			"Potion of Pleasing Pandiculation",
+			"Potion of Cherry Poppin'",
+			"Potion of Gainful Gastromancy",
+			"Potion of Doge",
+			"Such Potion",
+			"Potion of Mumpsimus",
+			"Potion of Getting Your Friends Back",
+			"Potion of Makeup Sex",
+			"Potion of Bacon",
+			"Potion of Internet Fame",
+			"Potion of Polyglottery",
+			"Potion of Catching Pokemon",
+			"Potion of Cleaning All The Things",
+			"Potion of Pwning Newbs",
+			"Potion of Turning Gay",
+			"Potion of Thor",
+			"Potion of Mermaidery",
+			"Potion of Potion Making",
+			"Potion of Looking Cool In A Trilby",
+			"Potion of Ethics in Games Journalism",
+			"Potion of Turdiformity",
+			"Potion of Humorous Hashtags",
+			"Potion of @%$!",
+			"Potion of Emphatic Eructation",
+			"Potion of Frikin' Firkins",
+			"Potion of Backpfeifengesicht",
+			"Potion of Moist Wenises",
+			"Potion of Floccinaucinihilipilification",
+			"Potion of Heart Tittles",
+			"Potion of 6.39509382",
+			"Potion of Spoonerisms",
+			"Potion of Apivorous Birds",
+			"Potion of Ensorcelling",
+			"Potion of Understanding Ikea Names",
+			"Potion of Sanitizing Smegma",
+			"Potion of Battle Rapping",
+			"Potion of Becoming Whelmed",
+			"Potion of Nyan Nyan Nyan Nyan Nyan Nyan Nyan",
+			"Potion of Pogonotrophy",
+		};
 
 }
