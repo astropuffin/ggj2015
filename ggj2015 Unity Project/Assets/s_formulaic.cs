@@ -9,9 +9,9 @@ public class s_formulaic : MonoBehaviour {
     public int difficulty;
 	public float reqDelay;
 	private float lastReqTime;
-	public List<int[]> formulas = new List<int[]>();
+	public List<GameObject> formulas = new List<GameObject>();
 	public int formCount;
-	public List<s_formulaInstance> formInstances;
+//	public List<s_formulaInstance> formInstances;
 
 	// Use this for initialization
 	void Start () {
@@ -64,12 +64,13 @@ public class s_formulaic : MonoBehaviour {
 			s_i_requirement.numReq = req.reqIntStruct;
 			s_i_requirement.reqTypeArray = req.reqTypeStuct;
 			s_i_requirement.formNumber = ++formCount;
-			formInstances.Add(s_i_requirement);
+//			formInstances.Add(s_i_requirement);
+			formulas.Add(i_requirement);
 		}
 	}
 
-	public void achieveFormula(s_formulaInstance fi){
-		formInstances.Remove(fi);
+	public void achieveFormula(GameObject fi){
+		formulas.Remove (fi);
 	}
 
 }

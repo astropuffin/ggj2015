@@ -31,4 +31,11 @@ public class s_formulaInstance : MonoBehaviour {
 //		rt.localPosition = new Vector3(350,200,0);
 
 	}
+
+	public void achieve(){
+		s_formulaic[] sform = gameObject.GetComponentsInParent<s_formulaic>();
+		s_formulaic sform0 = sform[0];
+		sform0.achieveFormula(this.gameObject);
+		GameObject.Destroy(this.gameObject);
+	}
 }
