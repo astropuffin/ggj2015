@@ -111,9 +111,9 @@ public class s_ingredient : MonoBehaviour {
 		elements.Add(ingredientType.teddy,d_teddy);
 
 		Dictionary<toolTypes,int[]> d_gameboy = new Dictionary<toolTypes, int[]>();
-		d_gameboy.Add(toolTypes.blender,new int[]{1,0,0,0});
-		d_gameboy.Add(toolTypes.oven,new int[]{2,0,0,0});
-		d_gameboy.Add(toolTypes.still,new int[]{2,1,0,0});
+		d_gameboy.Add(toolTypes.blender,new int[]{0,0,1,0});
+		d_gameboy.Add(toolTypes.oven,new int[]{0,0,2,0});
+		d_gameboy.Add(toolTypes.still,new int[]{0,1,2,0});
 		elements.Add(ingredientType.gameboy,d_gameboy);
 
 		Dictionary<toolTypes,int[]> d_hammer = new Dictionary<toolTypes, int[]>();
@@ -123,9 +123,9 @@ public class s_ingredient : MonoBehaviour {
 		elements.Add(ingredientType.hammer,d_hammer);
 		
 		Dictionary<toolTypes,int[]> d_legos = new Dictionary<toolTypes, int[]>();
-		d_legos.Add(toolTypes.blender,new int[]{0,0,0,1});
-		d_legos.Add(toolTypes.oven,new int[]{1,0,0,1});
-		d_legos.Add(toolTypes.still,new int[]{1,0,0,2});
+		d_legos.Add(toolTypes.blender,new int[]{1,0,0,0});
+		d_legos.Add(toolTypes.oven,new int[]{2,1,0,0});
+		d_legos.Add(toolTypes.still,new int[]{2,2,0,0});
 		elements.Add(ingredientType.legos,d_legos);
 
 		Dictionary<toolTypes,int[]> d_mushroom = new Dictionary<toolTypes, int[]>();
@@ -135,25 +135,25 @@ public class s_ingredient : MonoBehaviour {
 		elements.Add(ingredientType.mushroom,d_mushroom);
 
 		Dictionary<toolTypes,int[]> d_rainbowsock = new Dictionary<toolTypes, int[]>();
-		d_rainbowsock.Add(toolTypes.blender,new int[]{0,0,0,1});
-		d_rainbowsock.Add(toolTypes.oven,new int[]{1,0,0,1});
-		d_rainbowsock.Add(toolTypes.still,new int[]{1,0,0,2});
+		d_rainbowsock.Add(toolTypes.blender,new int[]{0,1,1,0});
+		d_rainbowsock.Add(toolTypes.oven,new int[]{1,1,1,1});
+		d_rainbowsock.Add(toolTypes.still,new int[]{2,2,2,2});
 		elements.Add(ingredientType.rainbowsock,d_rainbowsock);
 		
 		Dictionary<toolTypes,int[]> d_rubberducky = new Dictionary<toolTypes, int[]>();
-		d_rubberducky.Add(toolTypes.blender,new int[]{0,0,0,1});
-		d_rubberducky.Add(toolTypes.oven,new int[]{1,0,0,1});
-		d_rubberducky.Add(toolTypes.still,new int[]{1,0,0,2});
+		d_rubberducky.Add(toolTypes.blender,new int[]{0,1,0,0});
+		d_rubberducky.Add(toolTypes.oven,new int[]{1,1,0,0});
+		d_rubberducky.Add(toolTypes.still,new int[]{1,3,0,0});
 		elements.Add(ingredientType.rubberducky,d_rubberducky);
 
 		Dictionary<toolTypes,int[]> d_shoe = new Dictionary<toolTypes, int[]>();
 		d_shoe.Add(toolTypes.blender,new int[]{0,0,0,1});
-		d_shoe.Add(toolTypes.oven,new int[]{1,0,0,1});
+		d_shoe.Add(toolTypes.oven,new int[]{0,0,0,2});
 		d_shoe.Add(toolTypes.still,new int[]{1,0,0,2});
 		elements.Add(ingredientType.shoe,d_shoe);
 
 		Dictionary<toolTypes,int[]> d_smartphone = new Dictionary<toolTypes, int[]>();
-		d_smartphone.Add(toolTypes.blender,new int[]{0,0,0,1});
+		d_smartphone.Add(toolTypes.blender,new int[]{1,0,0,0});
 		d_smartphone.Add(toolTypes.oven,new int[]{1,0,0,1});
 		d_smartphone.Add(toolTypes.still,new int[]{1,0,0,2});
 		elements.Add(ingredientType.smartphone,d_smartphone);
