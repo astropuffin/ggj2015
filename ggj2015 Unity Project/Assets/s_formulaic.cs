@@ -56,7 +56,8 @@ public class s_formulaic : MonoBehaviour {
 			GameObject i_requirement = Instantiate(formula,
 			                                       transform.position,
 			                                       new Quaternion(0, 0, 0, 0)) as GameObject;
-			i_requirement.transform.parent = gameObject.transform;
+//			i_requirement.transform.parent = gameObject.transform;
+			i_requirement.transform.SetParent(gameObject.transform);
 			s_formulaInstance s_i_requirement = i_requirement.GetComponent<s_formulaInstance>();
 			s_i_requirement.numReq = req.reqIntStruct;
 			s_i_requirement.reqTypeArray = req.reqTypeStuct;

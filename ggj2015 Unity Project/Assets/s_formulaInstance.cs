@@ -16,11 +16,19 @@ public class s_formulaInstance : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		fixSize();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	private void fixSize(){
+		RectTransform rt = gameObject.GetComponent<RectTransform>();
+//		rt.right = 200;
+		rt.sizeDelta = new Vector2(50,50);
+		rt.localPosition = new Vector3(350,200,0);
+
 	}
 }

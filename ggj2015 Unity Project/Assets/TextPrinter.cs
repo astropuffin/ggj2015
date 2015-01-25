@@ -12,7 +12,7 @@ public class TextPrinter : MonoBehaviour {
     public int charactersPerLine;
     int charactersPerCurrentLine;
 
-    private float stringPos = 0;
+//    private float stringPos = 0;
     public Text textbox;
 
     string currentText;
@@ -24,7 +24,7 @@ public class TextPrinter : MonoBehaviour {
     public void printScrollingString( string text )
     {
         currentText = text;
-        stringPos = 0;
+//        stringPos = 0;
         var lines = new string[numberOfLines];
         int charPos = 0;
         for (int i = 0; i < numberOfLines; i++)
