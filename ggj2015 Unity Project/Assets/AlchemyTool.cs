@@ -12,6 +12,7 @@ public class AlchemyTool : MonoBehaviour {
     public s_ingredient.toolTypes toolType;
     public GameObject particlesPrefab;
     public Sprite blenderResult, stillResult;
+    public RandomSounds processSounds, acceptSounds;
 
     public void acceptItem( s_ingredient ingredient )
     {
@@ -20,6 +21,9 @@ public class AlchemyTool : MonoBehaviour {
         currentIngredient.transform.localPosition = Vector3.zero;
         inUse = true;
         timer = useTime;
+
+        acceptSounds.playRandomSound();
+
     }
 
     public virtual void processIngredient(s_ingredient ingredient)
@@ -67,8 +71,10 @@ public class AlchemyTool : MonoBehaviour {
             particles.GetComponentInChildren<SpriteRenderer>().color = new Color(.4f, .3f, .3f, 1);
             
         }
-      
+
+        processSounds.playRandomSound();
         Destroy(ingredient.gameObject);
+
 
     }
 

@@ -24,6 +24,8 @@ public class Cauldron : MonoBehaviour {
         currentFulfillment += fulfillment;
         fulfillmentText.text = ":" + currentFulfillment.ToString();
 
+        GetComponent<RandomSounds>().playRandomSound();
+
     }
 
     public void dump()
