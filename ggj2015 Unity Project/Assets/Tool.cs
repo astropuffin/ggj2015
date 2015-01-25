@@ -6,7 +6,7 @@ public class Tool : MonoBehaviour {
     public float useTime;
     float timer;
     public bool inUse;
-    public GameObject itemSpot;
+    public GameObject itemSpot, processingSpot;
     public s_ingredient currentIngredient;
     public Tooltip tooltip;
     public s_ingredient.toolTypes toolType;
@@ -14,7 +14,7 @@ public class Tool : MonoBehaviour {
     public void acceptItem( s_ingredient ingredient )
     {
         currentIngredient = ingredient;
-        currentIngredient.transform.parent = itemSpot.transform;
+        currentIngredient.transform.parent = processingSpot.transform;
         currentIngredient.transform.localPosition = Vector3.zero;
         inUse = true;
         timer = useTime;
@@ -23,7 +23,8 @@ public class Tool : MonoBehaviour {
     public virtual void processIngredient(s_ingredient ingredient)
     {
         Debug.Log("processed!");
-        currentIngredient.transform.position += Vector3.up;
+        currentIngredient.transform.parent = itemSpot.transform;
+        currentIngredient.transform.localPosition = Vector3.zero;
     }
 
     void Update()

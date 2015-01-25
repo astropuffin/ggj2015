@@ -12,7 +12,7 @@ public class s_ingredient : MonoBehaviour {
 	}
 
 	public enum toolTypes {
-		boiler,
+		blender,
 		oven,
 		still
 	}
@@ -63,19 +63,19 @@ public class s_ingredient : MonoBehaviour {
 
 	void populateData(){
 		Dictionary<toolTypes,int[]> d_teddy = new Dictionary<toolTypes, int[]>();
-		d_teddy.Add(toolTypes.boiler,new int[]{1,0,0,0});
+		d_teddy.Add(toolTypes.blender,new int[]{1,0,0,0});
 		d_teddy.Add(toolTypes.oven,new int[]{2,0,0,0});
 		d_teddy.Add(toolTypes.still,new int[]{2,1,0,0});
 		elements.Add(ingredientType.teddy,d_teddy);
 
 		Dictionary<toolTypes,int[]> d_mushroom = new Dictionary<toolTypes, int[]>();
-		d_mushroom.Add(toolTypes.boiler,new int[]{0,0,1,0});
+		d_mushroom.Add(toolTypes.blender,new int[]{0,0,1,0});
 		d_mushroom.Add(toolTypes.oven,new int[]{0,0,2,0});
 		d_mushroom.Add(toolTypes.still,new int[]{0,0,2,1});
 		elements.Add(ingredientType.mushroom,d_mushroom);
 
 		Dictionary<toolTypes,int[]> d_hammer = new Dictionary<toolTypes, int[]>();
-		d_hammer.Add(toolTypes.boiler,new int[]{0,0,0,1});
+		d_hammer.Add(toolTypes.blender,new int[]{0,0,0,1});
 		d_hammer.Add(toolTypes.oven,new int[]{1,0,0,1});
 		d_hammer.Add(toolTypes.still,new int[]{1,0,0,2});
 		elements.Add(ingredientType.hammer,d_hammer);
