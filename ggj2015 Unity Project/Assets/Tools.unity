@@ -2774,7 +2774,7 @@ MonoBehaviour:
   cauldron: {fileID: 825421205}
   formula: 01000000020000000300000001000000
   winSound: {fileID: 8300000, guid: ffa88f1c291736f489d6cfd0b1970b01, type: 3}
-  difficulty: 3
+  difficulty: 4
   potionText: {fileID: 208613511}
 --- !u!114 &193747003
 MonoBehaviour:
