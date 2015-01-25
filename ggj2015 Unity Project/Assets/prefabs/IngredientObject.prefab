@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af92750608805c4084bdf63a45c0ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAge: 1.5
+  maxAge: 2
 --- !u!114 &11443270
 MonoBehaviour:
   m_ObjectHideFlags: 1

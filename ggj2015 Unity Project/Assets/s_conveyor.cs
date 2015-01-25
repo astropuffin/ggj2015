@@ -47,6 +47,8 @@ public class s_conveyor : MonoBehaviour {
 
     IEnumerator trashIngredient( GameObject go)
     {
+        Destroy(go.GetComponent<GlobalTween>() );
+        go.AddComponent<spinner>();
         TweenPosition.Begin(go.gameObject, .2f, trashGo.transform.position + Vector3.up * 2);
         yield return new WaitForSeconds(.3f);
         TweenPosition.Begin(go.gameObject, .4f, trashGo.transform.position);
