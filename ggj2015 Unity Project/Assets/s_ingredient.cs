@@ -69,3 +69,4 @@ public class s_ingredient : MonoBehaviour {
 		GetComponent<SpriteRenderer>().sprite = d_Sprite[i_type];
 	}
 
+}
