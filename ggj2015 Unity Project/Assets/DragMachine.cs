@@ -4,7 +4,8 @@ using System.Collections;
 public class DragMachine : MonoBehaviour {
 
     public Collider2D dragTarget;
-    public Tool[] tools;
+    public AlchemyTool[] tools;
+    public LayerMask draggables;
 
 	void Update () {
 
@@ -12,14 +13,13 @@ public class DragMachine : MonoBehaviour {
 
         if(Input.GetMouseButtonDown( 0 ))
         {
-            dragTarget = Physics2D.OverlapPoint( mousePoint );
+            dragTarget = Physics2D.OverlapPoint( mousePoint, draggables );
 
             if( dragTarget != null && dragTarget.GetComponent<Dragger>() != null )
             {
                 dragTarget.transform.parent = null;
                 if (dragTarget.tag == "ingredients")
                 {
-
                     foreach (var item in tools)
                     {
                         if (!item.inUse)
@@ -31,9 +31,6 @@ public class DragMachine : MonoBehaviour {
                         }
                     }
                 }
-
-           
-
             }
             else
             {
@@ -65,7 +62,7 @@ public class DragMachine : MonoBehaviour {
                 var tool = Physics2D.OverlapPoint(mousePoint, 1 << LayerMask.NameToLayer("Tools"));
                 if (tool != null)
                 {
-                    tool.GetComponent<Tool>().acceptItem(dragTarget.GetComponent<s_ingredient>());
+                    tool.GetComponent<AlchemyTool>().acceptItem(dragTarget.GetComponent<s_ingredient>());
                 } 
             }
 

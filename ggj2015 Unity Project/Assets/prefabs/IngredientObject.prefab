@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21231616}
   - 114: {fileID: 11444352}
   - 114: {fileID: 11431616}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: IngredientObject
   m_TagString: ingredients
   m_Icon: {fileID: 0}

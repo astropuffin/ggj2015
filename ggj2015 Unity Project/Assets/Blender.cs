@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Blender : Tool {
+public class Blender : AlchemyTool {
 
     public override void processIngredient(s_ingredient ingredient)
     {

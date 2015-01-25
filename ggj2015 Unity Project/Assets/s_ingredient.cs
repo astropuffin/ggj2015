@@ -32,6 +32,7 @@ public class s_ingredient : MonoBehaviour {
 		makeRandomIngredient();
 		assignSprite();
 		populateData();
+
 	}
 	
 	// Update is called once per frame
