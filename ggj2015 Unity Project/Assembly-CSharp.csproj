@@ -164,6 +164,7 @@
      <Compile Include="Assets\s_formulaInstance.cs" />
      <Compile Include="Assets\s_formulaic.cs" />
      <Compile Include="Assets\s_ingredient.cs" />
+     <Compile Include="Assets\textTimer.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>

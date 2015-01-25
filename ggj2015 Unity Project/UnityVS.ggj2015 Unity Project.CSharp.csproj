@@ -169,6 +169,7 @@
     <Compile Include="Assets\s_formulaInstance.cs" />
     <Compile Include="Assets\s_formulaic.cs" />
     <Compile Include="Assets\s_ingredient.cs" />
+    <Compile Include="Assets\textTimer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>
