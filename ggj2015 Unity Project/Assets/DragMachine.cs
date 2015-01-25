@@ -17,6 +17,19 @@ public class DragMachine : MonoBehaviour {
             if( dragTarget != null && dragTarget.GetComponent<Dragger>() != null )
             {
                 dragTarget.transform.parent = null;
+
+                foreach (var item in tools)
+                {
+                    if( !item.inUse )
+                    {
+                        var elements = dragTarget.GetComponent<s_ingredient>().getElements( item.toolType );
+                        item.tooltip.gameObject.SetActive(true);
+                        //friendships nostalgia, laughter, fulfillment
+                        item.tooltip.setToolTip(elements[1], elements[2], elements[0], elements[3]);
+                    }
+                }
+
+
             }
             else
             {
@@ -38,6 +51,15 @@ public class DragMachine : MonoBehaviour {
             {
                 tool.GetComponent<Tool>().acceptItem(dragTarget.GetComponent<s_ingredient>());
             }
+
+            foreach (var item in tools)
+            {
+                if( !item.inUse)
+                {
+                    item.tooltip.gameObject.SetActive(false);
+                }
+            }
+
             dragTarget = null;
         }
 	}
