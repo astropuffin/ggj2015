@@ -20,15 +20,16 @@ public class s_ingredient : MonoBehaviour {
 	public ingredientType i_type;
 
 	//add the sprites
-	private Dictionary<ingredientType,Sprite> d_Sprite;
-	public Sprite teddy;
+	private Dictionary<ingredientType,Sprite> d_Sprite = new Dictionary<ingredientType, Sprite>();
+	public Sprite s_teddy;
 	
 	Dictionary<ingredientType,Dictionary<toolTypes,int[]>> elements = new Dictionary<ingredientType,Dictionary<toolTypes,int[]>>();
 
 	void Start () {
-		populateData();
+		loadSprites();
 		makeRandomIngredient();
 		assignSprite();
+		populateData();
 	}
 	
 	// Update is called once per frame
@@ -44,15 +45,15 @@ public class s_ingredient : MonoBehaviour {
 		i_type = ingredientType.teddy;
 	}
 
+	private void loadSprites(){
+		
+		d_Sprite.Add(ingredientType.teddy,s_teddy);
+	}
+
 	void populateData(){
 		Dictionary<toolTypes,int[]> d_teddy = new Dictionary<toolTypes, int[]>();
 		d_teddy.Add(toolTypes.boiler,new int[]{1,0,0,0});
 		elements.Add(ingredientType.teddy,d_teddy);
-
-		d_Sprite.Add(ingredientType.teddy,teddy);
-
-
-
 
 //		int[,,] element_output = new int[,,]{
 //			{{1,0,0,0},{2,0,0,0},{2,1,0,0}},
