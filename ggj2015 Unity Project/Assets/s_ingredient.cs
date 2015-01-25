@@ -40,7 +40,7 @@ public class s_ingredient : MonoBehaviour {
 	}
 
 	public int[] getElements(toolTypes ttype){
-		return elements[ingredientType.teddy][ttype];
+		return elements[i_type][ttype];
 	}
 
 	public void makeRandomIngredient(){
