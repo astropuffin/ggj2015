@@ -17,18 +17,22 @@ public class DragMachine : MonoBehaviour {
             if( dragTarget != null && dragTarget.GetComponent<Dragger>() != null )
             {
                 dragTarget.transform.parent = null;
-
-                foreach (var item in tools)
+                if (dragTarget.tag == "ingredients")
                 {
-                    if( !item.inUse )
+
+                    foreach (var item in tools)
                     {
-                        var elements = dragTarget.GetComponent<s_ingredient>().getElements( item.toolType );
-                        item.tooltip.gameObject.SetActive(true);
-                        //friendships nostalgia, laughter, fulfillment
-                        item.tooltip.setToolTip(elements[1], elements[2], elements[0], elements[3]);
+                        if (!item.inUse)
+                        {
+                            var elements = dragTarget.GetComponent<s_ingredient>().getElements(item.toolType);
+                            item.tooltip.gameObject.SetActive(true);
+                            //friendships nostalgia, laughter, fulfillment
+                            item.tooltip.setToolTip(elements[1], elements[2], elements[0], elements[3]);
+                        }
                     }
                 }
 
+           
 
             }
             else
@@ -43,18 +47,31 @@ public class DragMachine : MonoBehaviour {
             dragTarget.transform.position = mousePoint;
         }
 
-        if( Input.GetMouseButtonUp( 0 ) )
+        if( Input.GetMouseButtonUp( 0 ) && dragTarget != null )
         {
-            
-            var tool = Physics2D.OverlapPoint(mousePoint, 1 << LayerMask.NameToLayer("Tools"));
-            if(tool != null && dragTarget != null )
+            if (dragTarget.tag == "elements")
             {
-                tool.GetComponent<Tool>().acceptItem(dragTarget.GetComponent<s_ingredient>());
+                var cauldron = Physics2D.OverlapPoint(mousePoint, 1 << LayerMask.NameToLayer("Cauldron"));
+                if(cauldron != null )
+                {
+                    var elements = dragTarget.GetComponent<ProcessedElements>();
+                    cauldron.GetComponent<Cauldron>().addElements(elements.friendship, elements.nostalgia, elements.laughter, elements.fulfillment);
+                    Destroy( dragTarget.gameObject );
+                }
+            }
+
+            if( dragTarget.tag == "ingredients")
+            {
+                var tool = Physics2D.OverlapPoint(mousePoint, 1 << LayerMask.NameToLayer("Tools"));
+                if (tool != null)
+                {
+                    tool.GetComponent<Tool>().acceptItem(dragTarget.GetComponent<s_ingredient>());
+                } 
             }
 
             foreach (var item in tools)
             {
-                if( !item.inUse)
+                if (!item.inUse)
                 {
                     item.tooltip.gameObject.SetActive(false);
                 }
