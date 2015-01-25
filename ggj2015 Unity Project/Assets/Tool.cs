@@ -8,7 +8,8 @@ public class Tool : MonoBehaviour {
     public bool inUse;
     public GameObject itemSpot;
     public s_ingredient currentIngredient;
-
+    public Tooltip tooltip;
+    public s_ingredient.toolTypes toolType;
 
     public void acceptItem( s_ingredient ingredient )
     {

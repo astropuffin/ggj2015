@@ -51,6 +51,7 @@
      <Compile Include="Assets\Dragger.cs" />
      <Compile Include="Assets\TextPrinter.cs" />
      <Compile Include="Assets\Tool.cs" />
+     <Compile Include="Assets\ToolTipper.cs" />
      <Compile Include="Assets\Tooltip.cs" />
      <Compile Include="Assets\s_conveyor.cs" />
      <Compile Include="Assets\s_ingredient.cs" />

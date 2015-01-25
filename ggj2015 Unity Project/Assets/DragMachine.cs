@@ -4,6 +4,7 @@ using System.Collections;
 public class DragMachine : MonoBehaviour {
 
     public Collider2D dragTarget;
+    public Tool[] tools;
 
 	void Update () {
 
