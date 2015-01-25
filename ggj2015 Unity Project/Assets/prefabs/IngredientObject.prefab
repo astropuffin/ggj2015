@@ -11,7 +11,8 @@ GameObject:
   - 212: {fileID: 21231616}
   - 114: {fileID: 11444352}
   - 114: {fileID: 11431616}
-  m_Layer: 0
+  - 114: {fileID: 11494476}
+  m_Layer: 10
   m_Name: IngredientObject
   m_TagString: ingredients
   m_Icon: {fileID: 0}
@@ -56,6 +57,18 @@ MonoBehaviour:
   s_teddy: {fileID: 21300000, guid: 8a4598239f23e52429ee4473deb3d541, type: 3}
   s_mushroom: {fileID: 21300000, guid: 39989cb78d94aef44bcc1d69b7c2cfb9, type: 3}
   s_hammer: {fileID: 21300000, guid: 67af063f91c15954fadacefcf6f1c537, type: 3}
+--- !u!114 &11494476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9125162b848fba4397f14f206140dab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  king: 0
 --- !u!212 &21231616
 SpriteRenderer:
   m_ObjectHideFlags: 1

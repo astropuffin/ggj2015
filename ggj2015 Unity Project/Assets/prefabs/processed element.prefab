@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 452682}
   - 198: {fileID: 19852682}
   - 199: {fileID: 19952682}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 114: {fileID: 11452684}
   - 58: {fileID: 5852682}
   - 114: {fileID: 11452682}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: processed element
   m_TagString: elements
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 486700}
   - 212: {fileID: 21286700}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
