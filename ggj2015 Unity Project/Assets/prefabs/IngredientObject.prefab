@@ -149,6 +149,10 @@ MonoBehaviour:
   s_rubberducky: {fileID: 21300000, guid: 3d832f6be994824448e39adfb6e9f4c0, type: 3}
   s_shoe: {fileID: 21300000, guid: 3b443aaf575169a4c8cb5ad7d6b7690f, type: 3}
   s_smartphone: {fileID: 21300000, guid: c312e5af71b190245aac17059bd2c023, type: 3}
+  s_slippers: {fileID: 21300000, guid: b09828e5e285b2941a289c2a77cee518, type: 3}
+  s_dino: {fileID: 21300000, guid: a2e018b75b3d7a147b71142622b3b5aa, type: 3}
+  s_backback: {fileID: 21300000, guid: cb3cea846adc4054ba2811547c8e0858, type: 3}
+  s_helment: {fileID: 21300000, guid: 1d381cb8fa987f44f8029110177271be, type: 3}
 --- !u!114 &11494476
 MonoBehaviour:
   m_ObjectHideFlags: 1
