@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11444352}
   - 114: {fileID: 11431616}
   - 114: {fileID: 11494476}
+  - 114: {fileID: 11443270}
   m_Layer: 10
   m_Name: IngredientObject
   m_TagString: ingredients
@@ -42,6 +43,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f1ff91699615240a252e232e0de0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11443270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73837f126068fe40bbe66f619cdc1c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 4e02580c9137ab04ba3f1bcca525c332, type: 3}
+  - {fileID: 8300000, guid: 99f38c43c3866f2458e23e0d9decb1be, type: 3}
+  - {fileID: 8300000, guid: ee9ddd8b9bc586743b5224c7c80f0b4b, type: 3}
+  - {fileID: 8300000, guid: db39a939725a8524499474c8bfa43930, type: 3}
+  - {fileID: 8300000, guid: 2116a2744315be74f9703d10cb540936, type: 3}
 --- !u!114 &11444352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,6 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9125162b848fba4397f14f206140dab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additive: 0
   king: 0
 --- !u!212 &21231616
 SpriteRenderer:
