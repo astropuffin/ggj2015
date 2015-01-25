@@ -44,13 +44,7 @@ public class s_ingredient : MonoBehaviour {
 	}
 
 	public void makeRandomIngredient(){
-//		i_type = ingredientType.teddy;
-
-		//var myEnumMemberCount = Enum.GetNames(typeof(MyEnum)).Length;
-////		var eCount = Enum.GetNames(typeof(ingredientType)).Length;
 		Array values = Enum.GetValues(typeof(ingredientType));
-//		Random random = new Random();
-//		UnityEngine.Random.Range (0,values.Length);
 		i_type = (ingredientType)values.GetValue(UnityEngine.Random.Range (0,values.Length));
 	}
 
