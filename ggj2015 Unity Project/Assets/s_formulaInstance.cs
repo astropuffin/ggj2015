@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 public enum reqType {
-	less,
+//	less,
 	greater,
 	equal
 }
@@ -64,11 +64,11 @@ public class s_formulaInstance : MonoBehaviour {
 					return valid = false;
 				}
 				break;
-			case reqType.less:
-				if(elements[i] >= numReq[i]){
-					return valid = false;
-				}
-				break;
+//			case reqType.less:
+//				if(elements[i] >= numReq[i]){
+//					return valid = false;
+//				}
+//				break;
 			}
 
 		}
@@ -113,8 +113,8 @@ public class s_formulaInstance : MonoBehaviour {
 			return "=";
 		case reqType.greater:
 			return ">";
-		case reqType.less:
-			return "<";
+//		case reqType.less:
+//			return "<";
 		default:
 			return "";
 		}
