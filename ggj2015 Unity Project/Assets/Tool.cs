@@ -10,6 +10,7 @@ public class Tool : MonoBehaviour {
     public s_ingredient currentIngredient;
     public Tooltip tooltip;
     public s_ingredient.toolTypes toolType;
+    public GameObject particlesPrefab;
 
     public void acceptItem( s_ingredient ingredient )
     {
@@ -22,9 +23,19 @@ public class Tool : MonoBehaviour {
 
     public virtual void processIngredient(s_ingredient ingredient)
     {
-        Debug.Log("processed!");
-        currentIngredient.transform.parent = itemSpot.transform;
-        currentIngredient.transform.localPosition = Vector3.zero;
+        
+        var particles = Instantiate(particlesPrefab) as GameObject;
+        particles.transform.position = itemSpot.transform.position;
+        var elements = particles.GetComponent<ProcessedElements>();
+        var elementValues = ingredient.getElements(toolType);
+        //order is friendship nostaliga, laugher, fulfillment
+
+        elements.friendship = elementValues[0];
+        elements.nostalgia = elementValues[1];
+        elements.laughter = elementValues[2];
+        elements.fulfillment = elementValues[3];
+        Destroy(ingredient.gameObject);
+
     }
 
     void Update()
