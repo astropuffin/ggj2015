@@ -10,7 +10,7 @@ public enum reqType {
 public class s_formulaInstance : MonoBehaviour {
 
 	public int[] numReq;// = new int[4]();
-
+	public int formNumber;
 
 	public reqType[] reqTypeArray;// = new reqType[4]();
 
@@ -27,8 +27,8 @@ public class s_formulaInstance : MonoBehaviour {
 	private void fixSize(){
 		RectTransform rt = gameObject.GetComponent<RectTransform>();
 //		rt.right = 200;
-		rt.sizeDelta = new Vector2(50,50);
-		rt.localPosition = new Vector3(350,200,0);
+//		rt.sizeDelta = new Vector2(50,50);
+//		rt.localPosition = new Vector3(350,200,0);
 
 	}
 }

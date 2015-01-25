@@ -54,6 +54,12 @@ public class s_ingredient : MonoBehaviour {
 		d_Sprite.Add(ingredientType.mushroom, s_mushroom);
 		d_Sprite.Add(ingredientType.hammer,s_hammer);
 	}
+	
+	public Dictionary<ingredientType,string[]> quips = new Dictionary<ingredientType, string[]>();
+
+	private void loadQuips(){
+		quips.Add(ingredientType.hammer,new string[]{"stuff","things"});
+	}
 
 	void populateData(){
 		Dictionary<toolTypes,int[]> d_teddy = new Dictionary<toolTypes, int[]>();
