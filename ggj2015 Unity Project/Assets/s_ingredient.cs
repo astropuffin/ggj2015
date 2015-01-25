@@ -99,9 +99,9 @@ public class s_ingredient : MonoBehaviour {
 		quips.Add(ingredientType.hammer,new string[]{"I was your first weapon!","How else you gonna bang?","Where will you get your fix?","I guess that's the final nail in the coffin.","At least I'm hammered","This is not a drill! I repeat, NOT A DRILL!","Thor shall avenge me!","Stop! It's Hammer time!"});
 		quips.Add(ingredientType.rubberducky,new string[]{"Fowl Play!","Well, this is going swimmingly.","Don't I fit the bill?","Hang a shirt in the shower to steam it","I'm the one","I play the best duckstep","This duck's out of luck","We still have so many songs to sing!"});
 		quips.Add(ingredientType.rainbowsock,new string[]{"Taste the rainbow","I made you so cool","Sock it to me!","Lost are all the happy endings","You'll go to prism for this!","But I'm recently single","You sock!","I'm a laughingsock!"});
-		quips.Add(ingredientType.gameboy,new string[]{"oh the feels","I brought you Zelda!","We gotta catch em all!","You really want to do this?","Game Over.","I'm crashing","Play Again?",""});
-		quips.Add(ingredientType.legos,new string[]{"I can still build your dreams!","I'm sorry about your foot","We spent so many hours together","Remember that spaceship?","This isn't what \"lego maniac\" means","I tried picking up the pieces","",""});
-		quips.Add(ingredientType.smartphone,new string[]{"","","","","","","",""});
+		quips.Add(ingredientType.gameboy,new string[]{"oh the feels","I brought you Zelda!","We gotta catch em all!","You really want to do this?","Game Over.","I'm crashing","Play Again?"});
+		quips.Add(ingredientType.legos,new string[]{"I can still build your dreams!","I'm sorry about your foot","We spent so many hours together","Remember that spaceship?","This isn't what \"lego maniac\" means","I tried picking up the pieces"});
+		quips.Add(ingredientType.smartphone,new string[]{"Siri said you loved me!","You were so excited about me!","You could sell me instead","What a phoney.","You're a loser without me","You said size doesn't matter!","Is there an app for that?",""});
 	}
 
 	void populateData(){
