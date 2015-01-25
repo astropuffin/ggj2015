@@ -84,6 +84,7 @@ public class s_ingredient : MonoBehaviour {
 
 	void assignSprite(){
 		GetComponent<SpriteRenderer>().sprite = d_Sprite[i_type];
+        gameObject.AddComponent<BoxCollider2D>();
 	}
 
 }

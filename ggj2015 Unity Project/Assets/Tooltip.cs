@@ -12,21 +12,21 @@ public class Tooltip : MonoBehaviour {
     //order is friendship nostaliga, laugher, full
     public void setToolTip( int nostaliga, int laughter, int friendship, int fulfillment )
     {
-        foreach (GameObject item in nostalgiaHolder.transform )
+        foreach (Transform item in nostalgiaHolder.transform )
         {
-            Destroy(item);
+            Destroy(item.gameObject);
         }
-        foreach (GameObject item in laughterHolder.transform)
+        foreach (Transform item in laughterHolder.transform)
         {
-            Destroy(item);
+            Destroy(item.gameObject);
         }
-        foreach (GameObject item in fulfillmentHolder.transform)
+        foreach (Transform item in fulfillmentHolder.transform)
         {
-            Destroy(item);
+            Destroy(item.gameObject);
         }
-        foreach (GameObject item in friendshipHolder.transform)
+        foreach (Transform item in friendshipHolder.transform)
         {
-            Destroy(item);
+            Destroy(item.gameObject);
         }
 
         for (int i = 0; i < nostaliga; i++)
@@ -44,7 +44,7 @@ public class Tooltip : MonoBehaviour {
         for (int i = 0; i < friendship; i++)
         {
             var sprite = Instantiate(friendshipSprite) as GameObject;
-            sprite.transform.parent = friendshipHolder.transform;
+            sprite.transform.SetParent(friendshipHolder.transform);
         }
 
         for (int i = 0; i < fulfillment; i++)
