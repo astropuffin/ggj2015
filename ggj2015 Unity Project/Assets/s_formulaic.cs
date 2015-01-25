@@ -43,6 +43,9 @@ public class s_formulaic : MonoBehaviour {
 		Array values = Enum.GetValues(typeof(reqType));
 		for(int i = 0; i < 4; i++){
 			reqT[i] = (reqType)values.GetValue(UnityEngine.Random.Range(0,values.Length));
+			if (reqT[i] == reqType.less && reqInt[i] == 0) {
+				reqT[i] = reqType.equal;
+			}
 		}
 		rs.reqTypeStuct = reqT;
 

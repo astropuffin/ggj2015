@@ -7,6 +7,9 @@ public class Cauldron : MonoBehaviour {
     public int currentFriendship, currentNostalgia, currentLaughter, currentFulfillment;
     public Text friendshipText, nostalgiaText, laughterText, fulfillmentText;
 
+	public void Start(){
+		addElements(0,0,0,0);
+	}
     public void addElements(int friendship, int nostalgia, int laughter, int fulfillment)
     {
         currentFriendship += friendship;
