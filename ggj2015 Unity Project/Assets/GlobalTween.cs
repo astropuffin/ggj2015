@@ -3,9 +3,18 @@ using System.Collections;
 
 public class GlobalTween : MonoBehaviour {
 
-    public GameObject tweenKing;
+    public static GameObject tweenKing;
+    public bool king;
 
-	
+
+    void Start()
+    {
+        if (king)
+        {
+            tweenKing = gameObject;
+        }
+    }
+
 	// Update is called once per frame
 	void Update () {
         transform.rotation = tweenKing.transform.rotation;
