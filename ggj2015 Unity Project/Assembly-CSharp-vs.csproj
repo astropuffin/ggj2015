@@ -51,6 +51,7 @@
      <Compile Include="Assets\Cauldron.cs" />
      <Compile Include="Assets\DragMachine.cs" />
      <Compile Include="Assets\Dragger.cs" />
+     <Compile Include="Assets\Formulaer.cs" />
      <Compile Include="Assets\GlobalTween.cs" />
      <Compile Include="Assets\NGUI\Scripts\Interaction\LanguageSelection.cs" />
      <Compile Include="Assets\NGUI\Scripts\Interaction\TypewriterEffect.cs" />

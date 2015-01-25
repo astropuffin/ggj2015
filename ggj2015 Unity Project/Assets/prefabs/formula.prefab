@@ -673,6 +673,7 @@ MonoBehaviour:
   formNumber: 0
   reqTypeArray: 
   cauldron: {fileID: 100002, guid: f0c6b48daa91ecb429a81d8a9fe46847, type: 3}
+  achieveSound: {fileID: 8300000, guid: ffa88f1c291736f489d6cfd0b1970b01, type: 3}
 --- !u!222 &22209790
 CanvasRenderer:
   m_ObjectHideFlags: 1
