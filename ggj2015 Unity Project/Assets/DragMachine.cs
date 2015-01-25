@@ -20,6 +20,7 @@ public class DragMachine : MonoBehaviour {
                 dragTarget.transform.parent = null;
                 if (dragTarget.tag == "ingredients")
                 {
+                    dragTarget.GetComponent<RandomSounds>().playRandomSound();
                     foreach (var item in tools)
                     {
                         if (!item.inUse)
