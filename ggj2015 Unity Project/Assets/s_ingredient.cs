@@ -44,7 +44,8 @@ public class s_ingredient : MonoBehaviour {
 		makeRandomIngredient();
 		assignSprite();
 		populateData();
-
+		loadQuips();
+//		quip();
 	}
 	
 	// Update is called once per frame
@@ -72,6 +73,20 @@ public class s_ingredient : MonoBehaviour {
 		d_Sprite.Add(ingredientType.rubberducky,s_rubberducky);
 		d_Sprite.Add(ingredientType.shoe,s_shoe);
 		d_Sprite.Add(ingredientType.smartphone,s_smartphone);
+	}
+
+
+	public void quip(){
+		foreach (Transform child in gameObject.transform){
+			TextMesh tm = child.GetComponent<TextMesh>();
+			Debug.Log(i_type);
+//			string[] stuff = quips[ingredientType.shoe];
+			string[] quipArray = quips[i_type];
+			tm.text = quipArray[UnityEngine.Random.Range(0,quipArray.Length)];
+			tm.alignment = TextAlignment.Center;
+			child.transform.rotation = new Quaternion(0,0,0,0);
+			child.transform.parent = null;
+		}
 	}
 	
 	public Dictionary<ingredientType,string[]> quips = new Dictionary<ingredientType, string[]>();

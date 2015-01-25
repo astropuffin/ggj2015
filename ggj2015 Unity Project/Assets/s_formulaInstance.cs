@@ -63,6 +63,7 @@ public class s_formulaInstance : MonoBehaviour {
 				if(elements[i] <= numReq[i]){
 					return valid = false;
 				}
+
 				break;
 //			case reqType.less:
 //				if(elements[i] >= numReq[i]){
