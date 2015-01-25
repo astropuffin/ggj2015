@@ -12,9 +12,9 @@ public class s_ingredient : MonoBehaviour {
 	}
 
 	public enum toolTypes {
-		boiler,
-		grinder,
-		grater
+		blender,
+		oven,
+		still
 	}
 
 	public ingredientType i_type;
@@ -52,7 +52,7 @@ public class s_ingredient : MonoBehaviour {
 
 	void populateData(){
 		Dictionary<toolTypes,int[]> d_teddy = new Dictionary<toolTypes, int[]>();
-		d_teddy.Add(toolTypes.boiler,new int[]{1,0,0,0});
+		d_teddy.Add(toolTypes.blender,new int[]{1,0,0,0});
 		elements.Add(ingredientType.teddy,d_teddy);
 
 //		int[,,] element_output = new int[,,]{

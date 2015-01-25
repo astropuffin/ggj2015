@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Blender.cs" />
+    <Compile Include="Assets\Cauldron.cs" />
     <Compile Include="Assets\DragMachine.cs" />
     <Compile Include="Assets\Dragger.cs" />
     <Compile Include="Assets\TextPrinter.cs" />
