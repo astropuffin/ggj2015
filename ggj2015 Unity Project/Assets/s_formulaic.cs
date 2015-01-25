@@ -11,12 +11,6 @@ public class s_formulaic : MonoBehaviour {
 	private float lastReqTime;
 	public List<int[]> formulas = new List<int[]>();
 
-	private enum reqType {
-		less,
-		greater,
-		equal
-	}
-
 	// Use this for initialization
 	void Start () {
 	
@@ -37,13 +31,13 @@ public class s_formulaic : MonoBehaviour {
 	//generate random element requirements
 	private formulaicStruct newRequirement(){
 		formulaicStruct rs = new formulaicStruct();
-		int[] reqInt = new int[4]();
+		int[] reqInt = new int[4];
 		for(int i = 0; i < 4; i++){
 			reqInt[i] = UnityEngine.Random.Range(0,difficulty);
 		}
 		rs.reqIntStruct = reqInt;
 
-		reqType[] reqT = new reqType[4]();
+		reqType[] reqT = new reqType[4];
 		Array values = Enum.GetValues(typeof(reqType));
 		for(int i = 0; i < 4; i++){
 			reqT[i] = (reqType)values.GetValue(UnityEngine.Random.Range(0,values.Length));
@@ -63,7 +57,7 @@ public class s_formulaic : MonoBehaviour {
 			                                       transform.position,
 			                                       new Quaternion(0, 0, 0, 0)) as GameObject;
 			i_requirement.transform.parent = gameObject.transform;
-			s_formulaInstance s_i_requirement = i_requirement.GetComponent<s_formulaInstance>;
+			s_formulaInstance s_i_requirement = i_requirement.GetComponent<s_formulaInstance>();
 			s_i_requirement.numReq = req.reqIntStruct;
 			s_i_requirement.reqTypeArray = req.reqTypeStuct;
 		}
