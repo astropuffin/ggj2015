@@ -63,19 +63,20 @@ public class DragMachine : MonoBehaviour {
             if( dragTarget.tag == "ingredients")
             {
                 var tool = Physics2D.OverlapPoint(mousePoint, 1 << LayerMask.NameToLayer("Tools"));
-                if (tool != null )
+                if (tool != null)
                 {
                     tool.GetComponent<Tool>().acceptItem(dragTarget.GetComponent<s_ingredient>());
-                }
+                } 
+            }
 
-                foreach (var item in tools)
+            foreach (var item in tools)
+            {
+                if (!item.inUse)
                 {
-                    if (!item.inUse)
-                    {
-                        item.tooltip.gameObject.SetActive(false);
-                    }
+                    item.tooltip.gameObject.SetActive(false);
                 }
             }
+
             dragTarget = null;
         }
 	}

@@ -6,8 +6,8 @@ using System.Collections.Generic;
 public class s_formulaic : MonoBehaviour {
 
 	public GameObject formula;
-	public int difficulty = new int();
-	public float reqDelay = new float();
+    public int difficulty;
+	public float reqDelay;
 	private float lastReqTime;
 	public List<int[]> formulas = new List<int[]>();
 
@@ -33,7 +33,7 @@ public class s_formulaic : MonoBehaviour {
 		formulaicStruct rs = new formulaicStruct();
 		int[] reqInt = new int[4];
 		for(int i = 0; i < 4; i++){
-			reqInt[i] = UnityEngine.Random.Range(0,difficulty);
+			reqInt[i] = UnityEngine.Random.Range(0,difficulty + 1);
 		}
 		rs.reqIntStruct = reqInt;
 
